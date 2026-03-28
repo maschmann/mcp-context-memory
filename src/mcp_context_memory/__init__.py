@@ -36,8 +36,19 @@ EXT_TO_LANG = {
     '.htm': 'html'
 }
 
-# Default directories to exclude from indexing
-DEFAULT_EXCLUDES = {'node_modules', 'venv', '.venv', '.git', '__pycache__', '.context_db', 'build', 'dist', '.idea', '.vscode'}
+# Default directories to exclude from indexing to keep it focused on project code
+DEFAULT_EXCLUDES = {
+    'node_modules', 'bower_components',                      # JS/Frontend
+    'venv', '.venv', '__pycache__', '.tox', '.pytest_cache',  # Python
+    'vendor',                                                # PHP/Composer, Go
+    '.git', '.svn', '.hg',                                   # Version Control
+    '.context_db',                                           # Local DB
+    'build', 'dist', 'out', 'target', 'bin', 'obj',          # Build/Compiled Artifacts
+    '.idea', '.vscode', '.settings',                         # IDEs
+    '.gradle', '.m2',                                        # Java/Maven/Gradle
+    'gems', '.bundle',                                       # Ruby
+    'deps', '_build'                                         # Elixir
+}
 
 # Target AST Node Types for semantic extraction
 TARGET_TYPES = {
