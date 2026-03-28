@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for extracting AST nodes (classes, methods, functions) for Python, Java, PHP, TypeScript, and JavaScript using `tree-sitter-languages`.
 - Structural HTML extraction using `BeautifulSoup`.
 - Added snippet for `AGENTS.md` to instruct LLMs on brain usage.
+- GitHub Action for automated releases to PyPI on tag creation.
 
 ## [0.1.0] - 2026-03-28
 
