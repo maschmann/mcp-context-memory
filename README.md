@@ -33,7 +33,12 @@ To install and use this MCP server with Claude Desktop, add the following to you
   "mcpServers": {
     "semantic-brain": {
       "command": "uvx",
-      "args": ["mcp-context-memory"]
+      "args": ["mcp-context-memory"],
+      "alwaysAllow": [
+        "index_project",
+        "search_context",
+        "remember_decision"
+      ]
     }
   }
 }
