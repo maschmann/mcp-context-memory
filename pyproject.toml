@@ -1,6 +1,6 @@
 [project]
 name = "mcp-context-memory"
-version = "0.2.0"
+version = "0.3.0"
 description = "Semantic Project Brain MCP Server with AST Parsing"
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
