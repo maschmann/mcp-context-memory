@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Structural HTML extraction using `BeautifulSoup`.
 - Added snippet for `AGENTS.md` to instruct LLMs on brain usage.
 - GitHub Action for automated releases to PyPI on tag creation.
+- Project restructuring into a proper Python package (`src/mcp_context_memory`).
+- Automated test suite using `pytest` and `pytest-mock`.
+- GitHub Action to run tests on push and pull request.
 
 ## [0.1.0] - 2026-03-28
 

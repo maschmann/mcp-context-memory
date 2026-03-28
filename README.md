@@ -42,20 +42,20 @@ To install and use this MCP server with Claude Desktop, add the following to you
         "--from", "beautifulsoup4",
         "--from", "pathspec",
         "python",
-        "/path/to/this/project/server.py"
+        "/path/to/this/project/src/mcp_context_memory/__init__.py"
       ]
     }
   }
 }
 ```
-*Note: Replace `/path/to/this/project/server.py` with the absolute path to the `server.py` file.*
+*Note: Replace `/path/to/this/project/src/mcp_context_memory/__init__.py` with the absolute path to the file.*
 
 ### Cursor Integration
 
 In Cursor, go to **Settings > Features > MCP** and add a new MCP Server:
 - **Name:** Semantic Brain
 - **Type:** `command`
-- **Command:** `uvx --from fastmcp --from chromadb --from sentence-transformers --from tree-sitter --from tree-sitter-languages --from beautifulsoup4 --from pathspec python /path/to/this/project/server.py`
+- **Command:** `uvx --from fastmcp --from chromadb --from sentence-transformers --from tree-sitter --from tree-sitter-languages --from beautifulsoup4 --from pathspec python /path/to/this/project/src/mcp_context_memory/__init__.py`
 
 ## Bootstrapping an Existing Project
 
