@@ -22,7 +22,7 @@ The server provides three MCP tools:
 
 ## Usage with AI Assistants
 
-You can use `uvx` (part of `uv`) to run this server directly.
+You can use `uvx` (part of `uv`) to run this server directly from PyPI. This is the recommended way to use the Semantic Project Brain as it handles all dependencies automatically.
 
 ### Claude Desktop Integration
 
@@ -33,29 +33,18 @@ To install and use this MCP server with Claude Desktop, add the following to you
   "mcpServers": {
     "semantic-brain": {
       "command": "uvx",
-      "args": [
-        "--from", "fastmcp",
-        "--from", "chromadb",
-        "--from", "sentence-transformers",
-        "--from", "tree-sitter",
-        "--from", "tree-sitter-languages",
-        "--from", "beautifulsoup4",
-        "--from", "pathspec",
-        "python",
-        "/path/to/this/project/src/mcp_context_memory/__init__.py"
-      ]
+      "args": ["mcp-context-memory"]
     }
   }
 }
 ```
-*Note: Replace `/path/to/this/project/src/mcp_context_memory/__init__.py` with the absolute path to the file.*
 
 ### Cursor Integration
 
 In Cursor, go to **Settings > Features > MCP** and add a new MCP Server:
 - **Name:** Semantic Brain
 - **Type:** `command`
-- **Command:** `uvx --from fastmcp --from chromadb --from sentence-transformers --from tree-sitter --from tree-sitter-languages --from beautifulsoup4 --from pathspec python /path/to/this/project/src/mcp_context_memory/__init__.py`
+- **Command:** `uvx mcp-context-memory`
 
 ## Bootstrapping an Existing Project
 
