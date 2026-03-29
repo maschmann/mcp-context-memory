@@ -5,7 +5,7 @@ from fastmcp import FastMCP
 import chromadb
 import pathspec
 from bs4 import BeautifulSoup
-from tree_sitter_languages import get_parser
+from tree_sitter_language_pack import get_parser
 
 # Initialize the MCP server
 mcp = FastMCP("Semantic Project Brain")
@@ -117,13 +117,13 @@ def extract_html_semantics(content: str) -> List[Dict[str, Any]]:
     return extracted
 
 @mcp.tool()
-def index_project(path: str) -> str:
+def index_project(path: str = ".") -> str:
     """
     Scans the directory, respects .gitignore, and performs AST-based decomposition
     to index class definitions, methods, and structural HTML/CSS into 'code_semantics'.
     
     Args:
-        path: The absolute or relative path of the directory to index.
+        path: The absolute or relative path of the directory to index. Defaults to current directory.
     """
     if not os.path.exists(path) or not os.path.isdir(path):
         return f"Error: Path '{path}' is not a valid directory."

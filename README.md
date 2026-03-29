@@ -16,7 +16,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ## Available Tools
 
 The server provides three MCP tools:
-1. `index_project(path: str)`: Scans a directory, parses code semantically using AST (Python, Java, PHP, TS, JS, HTML), and indexes it.
+1. `index_project(path: str = ".")`: Scans a directory, parses code semantically using AST (Python, Java, PHP, TS, JS, HTML), and indexes it. Defaults to current directory.
 2. `search_context(query: str)`: A unified search over AST nodes and past project decisions.
 3. `remember_decision(topic: str, context: str)`: Saves manual architectural notes or reasoning (e.g., "Why we chose framework X").
 
